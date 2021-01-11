@@ -7,12 +7,32 @@ import { GridModule } from '@progress/kendo-angular-grid';
 
 import { AppComponent } from './app.component';
 import { CategoriesService } from './northwind.service';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavigationModule } from '@progress/kendo-angular-navigation';
+import { LayoutModule } from '@progress/kendo-angular-layout';
+import { IndicatorsModule } from '@progress/kendo-angular-indicators';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+import { IconsModule } from '@progress/kendo-angular-icons';
+import { GridComponent } from './grid/grid.component';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
 
 enableProdMode();
 
 @NgModule({
-  imports: [ BrowserModule, BrowserAnimationsModule, GridModule, HttpClientModule ],
-  declarations: [ AppComponent ],
+  imports: [ BrowserModule,
+    BrowserAnimationsModule,
+    GridModule,
+    HttpClientModule,
+    AppRoutingModule,
+    NavigationModule,
+    LayoutModule,
+    IndicatorsModule,
+    InputsModule,
+    IconsModule,
+    ButtonsModule
+  ],
+  declarations: [ AppComponent, DashboardComponent, GridComponent ],
   providers: [ CategoriesService ],
   bootstrap: [ AppComponent ]
 })
