@@ -16,6 +16,11 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import { IconsModule } from '@progress/kendo-angular-icons';
 import { GridComponent } from './grid/grid.component';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import 'hammerjs';
+import { ChartComponent } from './chart/chart.component';
+
+
 
 enableProdMode();
 
@@ -30,9 +35,10 @@ enableProdMode();
     IndicatorsModule,
     InputsModule,
     IconsModule,
-    ButtonsModule
+    ButtonsModule,
+    ChartsModule
   ],
-  declarations: [ AppComponent, DashboardComponent, GridComponent ],
+  declarations: [ AppComponent, DashboardComponent, GridComponent, ChartComponent ],
   providers: [ CategoriesService ],
   bootstrap: [ AppComponent ]
 })
